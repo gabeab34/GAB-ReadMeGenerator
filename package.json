@@ -1,0 +1,23 @@
+{
+  "name": "gab-readmemaker-c9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabeab34/GAB-ReadMeMaker-C9.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabeab34/GAB-ReadMeMaker-C9/issues"
+  },
+  "homepage": "https://github.com/gabeab34/GAB-ReadMeMaker-C9#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^9.0.0"
+  }
+}
