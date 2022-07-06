@@ -1,8 +1,9 @@
 // TODO: Include packages needed for this application
-const inquirer = require('inquirer');
-const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown.js');
-
+// const inquirer = import('inquirer');
+// const fs = import('fs');
+import fs from 'fs'
+import inquirer from 'inquirer';
+// import { generateMarkdown } from './utils/generateMarkdown.js';
 
 
 
@@ -12,87 +13,70 @@ const questions = [
 
         type: 'input',
         name: 'title',
-        message: 'What do you want your project to be named?'
+        message: 'What do you want your project to be named?',
+        default: 'my project',
 
     },
     {
 
         type: 'input',
         name: 'description',
-        message: 'Please briefly describe your project'
+        message: 'Please briefly describe your project',
+        default: 'this is my project',
 
     },
     {
 
         type: 'input',
         name: 'installation',
-        message: 'Please enter any steps needed to install your project'
+        message: 'Please enter any steps needed to install your project',
 
     },
     {
 
         type: 'input',
         name: 'usage',
-        message: 'Please enter any needed usage information for your project'
+        message: 'Please enter any needed usage information for your project',
 
     },
     {
 
         type: 'input',
         name: 'contributions',
-        message: 'Please briefly state how other developers can contribute to your project'
+        message: 'Please briefly state how other developers can contribute to your project',
 
     },
     {
 
         type: 'input',
         name: 'test',
-        message: 'Please give testing instructions for your project'
+        message: 'Please give testing instructions for your project',
 
     },
     {
 
         type: 'input',
         name: 'email',
-        message: 'please enter your email address'
+        message: 'please enter your email address',
 
     },
     {
 
         type: 'input',
         name: 'github',
-        message: 'Please enter your github username'
+        message: 'Please enter your github username',
 
     },
     {
 
         type: 'input',
         name: 'licenses',
-        message: 'Please enter any licenses needed for your projcet'
+        message: 'Please enter any licenses needed for your project',
 
-    },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 
 ];
+    
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -104,16 +88,21 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {
-    const userAnswers = inquirer.prompt(questions);
+async function init() {
+    try {
+        const userAnswers = await inquirer.prompt(questions);
+        console.log("Your responses: ", userAnswers);
     
-    const generateReadMe = generateMarkdown(userAnswers)
+        const generateReadMe = generateMarkdown(userAnswers);
 
-    writeToFile('NewReadMe.md', generateReadMe)
+        writeToFile('NewReadMe.md', generateReadMe);
 
 
-
-}
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 // Function call to initialize app
 init();
+// inquirer.prompt(questions)
