@@ -3,7 +3,7 @@
 // const fs = import('fs');
 import fs from 'fs'
 import inquirer from 'inquirer';
-// import { generateMarkdown } from './utils/generateMarkdown.js';
+import generateMarkdown from './utils/generateMarkdown.js';
 
 
 
@@ -79,8 +79,8 @@ const questions = [
     
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, error => {
+function writeToFile(fileName, readMe) {
+    fs.writeFile(fileName, readMe, error => {
         if (error) { 
         return console.log(error)}
         else console.log("A readMe for your project has been successfully generated")
@@ -89,7 +89,7 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 async function init() {
-    try {
+    
         const userAnswers = await inquirer.prompt(questions);
         console.log("Your responses: ", userAnswers);
     
@@ -98,9 +98,8 @@ async function init() {
         writeToFile('NewReadMe.md', generateReadMe);
 
 
-    } catch (error) {
-        console.log(error);
-    }
+    
+    
 };
 
 // Function call to initialize app
