@@ -1,5 +1,5 @@
 
-  # my project
+  # my new project
 
   ## Table of Contents:
 
@@ -11,32 +11,35 @@
 
   * [Contributions](#Contributions)
 
-  * [Test](#Test Instructions)
+  * [Test](#Tests)
 
-  * [Email](#Contact Info)
+  * [Email](#Questions)
 
-  * [Github](#Contact Info)
+  * [Github](#Questions)
 
   ## Description: 
   this is my project
 
   ## Installation: 
-  
+  no
   
   ## Usage: 
-  
+  no
+
+  ## License:
+  no
 
   ## Contributions: 
-  
+  no
 
-  ## Test Instructions: 
-  
+  ## Tests: 
+  no
 
-  ## Contact info:
+  ## Questions:
 
-  [Email](mailto:)
+  [Email](mailto:no)
 
-  [GitHub](https://github.com/)
+  [GitHub](https://github.com/no)
 
   
 

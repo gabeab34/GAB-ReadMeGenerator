@@ -28,11 +28,11 @@ function generateMarkdown(userAnswers) {
 
   * [Contributions](#Contributions)
 
-  * [Test](#Test Instructions)
+  * [Test](#Tests)
 
-  * [Email](#Contact Info)
+  * [Email](#Questions)
 
-  * [Github](#Contact Info)
+  * [Github](#Questions)
 
   ## Description: 
   ${userAnswers.description}
@@ -43,13 +43,16 @@ function generateMarkdown(userAnswers) {
   ## Usage: 
   ${userAnswers.usage}
 
+  ## License:
+  ${userAnswers.licenses}
+
   ## Contributions: 
   ${userAnswers.contributions}
 
-  ## Test Instructions: 
+  ## Tests: 
   ${userAnswers.test}
 
-  ## Contact info:
+  ## Questions:
 
   [Email](mailto:${userAnswers.email})
 

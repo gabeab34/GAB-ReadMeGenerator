@@ -95,7 +95,7 @@ async function init() {
     
         const generateReadMe = generateMarkdown(userAnswers);
 
-        writeToFile('NewReadMe.md', generateReadMe);
+        writeToFile(`${userAnswers.title}.md`, generateReadMe);
 
 
     
