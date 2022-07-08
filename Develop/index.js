@@ -69,10 +69,10 @@ const questions = [
     },
     {
 
-        type: 'input',
-        name: 'licenses',
+        type: 'list',
+        name: 'license',
         message: 'Please enter any licenses needed for your project',
-
+        choices: ['APM', 'CPAN', 'CTAN', 'Gitlab', 'none'],
     }
 
 ];
