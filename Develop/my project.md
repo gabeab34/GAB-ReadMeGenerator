@@ -1,7 +1,7 @@
 
   # my project
 
-  
+  ![license](https://img.shields.io/gitlab/license/gitlab-org/gitlab)
 
 
   ## Table of Contents:
@@ -24,34 +24,24 @@
   this is my project
 
   ## Installation: 
-  
+  no
   
   ## Usage: 
-  
+  no
 
   ## License:
-  none
+  Gitlab 
+  For more info please visit: https://about.gitlab.com/pricing/licensing-faq/
 
   ## Contributions: 
-  
+  no
 
   ## Tests: 
-  
+  no
 
   ## Questions:
 
-  [Email](mailto:)
+  [Email](mailto:no)
 
-  [GitHub](https://github.com/)
-
-  
-
-
-
-
-
-  
-  
- 
-            
+  [GitHub](https://github.com/no)
 

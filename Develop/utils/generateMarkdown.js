@@ -12,17 +12,25 @@ function renderLicenseBadge(license) {
   } else if (license.name === 'none') {
     license.badge = '';
   }
-
-  
-    
-  
-  }
+}
   
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
-// license.address = 'https://docs.appdynamics.com/appd/22.x/latest/en/application-monitoring'
+function renderLicenseLink(license) {
+  if (license.name === 'APM') {
+    license.address = "For more info please visit: https://docs.appdynamics.com/appd/22.x/latest/en/application-monitoring";
+  } else if (license.name === 'CPAN') {
+    license.address = "For more info please visit: https://www.perlfoundation.org/cpan-licensing-guidelines.html";
+  } else if (license.name === 'CTAN') {
+    license.address = "For more info please visit: https://ctan.org/license?lang=en";
+  } else if (license.name === 'Gitlab') {
+    license.address = "For more info please visit: https://about.gitlab.com/pricing/licensing-faq/";
+  } else if (license.name === 'none') {
+    license.address = '';
+  }
+}
+
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
@@ -38,6 +46,7 @@ function generateMarkdown(userAnswers) {
   };
   renderLicenseBadge(license)
   console.log(license)
+  renderLicenseLink(license)
   
   readMe = `
   # ${userAnswers.title}
@@ -71,7 +80,8 @@ function generateMarkdown(userAnswers) {
   ${userAnswers.usage}
 
   ## License:
-  ${userAnswers.license}
+  ${userAnswers.license} 
+  ${license.address}
 
   ## Contributions: 
   ${userAnswers.contributions}
@@ -84,17 +94,6 @@ function generateMarkdown(userAnswers) {
   [Email](mailto:${userAnswers.email})
 
   [GitHub](https://github.com/${userAnswers.github})
-
-  
-
-
-
-
-
-  
-  
- 
-            
 
 `
   return readMe;
